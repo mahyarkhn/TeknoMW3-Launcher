@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="eheh.Windows.Content.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             xmlns:local="clr-namespace:eheh.Windows.Content"
+             mc:Ignorable="d" 
+             d:DesignHeight="504" d:DesignWidth="756">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:0.3}">
+            <Grid Background="#282828"
+                  TextBlock.FontFamily="Arial" TextBlock.FontSize="15" TextBlock.Foreground="WhiteSmoke" TextBlock.TextAlignment="Center">
+                <StackPanel>
+                    <WrapPanel Margin="40,40,0,0">
+                        <TextBlock Margin="0,5" Width="150">In-Game-Name:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxInGameName" MaxWidth="200" Width="200" MaxLength="15" Padding="2,0" materialDesign:HintAssist.Hint="Max: 15 char" />
+                    </WrapPanel>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Clan Tag:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxClanTag" MaxWidth="200" Width="200" MaxLength="4" Padding="2,0" materialDesign:HintAssist.Hint="Max: 4 char" />
+                    </WrapPanel>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Title:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxTitle" MaxWidth="200" Width="200" MaxLength="25" Padding="2,0" materialDesign:HintAssist.Hint="Max: 25 char" />
+                        <!--<Button Margin="5,5" x:Name="btnSpecialTitles" Height="25">Special Titles</Button>-->
+                    </WrapPanel>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Clan Emblem:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxClanEmblem" MaxWidth="200" Width="200" MaxLength="3" Padding="2,0" materialDesign:HintAssist.Hint="0 to 350" />
+                    </WrapPanel>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Clan Title:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxClanTitle" MaxWidth="200" Width="200" MaxLength="3" Padding="2,0" materialDesign:HintAssist.Hint="0 to 511" />
+                        <ToggleButton Margin="5,5" x:Name="tglbtnNullClanTitle" Click="Tbbtn_Clicked"/>
+                        <TextBlock Margin="5,5">Null Clan Title</TextBlock>
+                    </WrapPanel>
+                    <Label Margin="10" Background="Aqua" Width="700" Height="1"/>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Max FPS:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxMaxFps" MaxWidth="200" Width="200" MaxLength="3" Padding="2,0" materialDesign:HintAssist.Hint="46 to 500" />
+                        <ToggleButton Margin="5,5" x:Name="tglbtnUnlimitedFps" Click="Tbbtn_Clicked"/>
+                        <TextBlock Margin="5,5">Unlimited FPS</TextBlock>
+                    </WrapPanel>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Field-Of-View:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxFieldOfView" MaxWidth="200" Width="200" MaxLength="3" Padding="2,0" materialDesign:HintAssist.Hint="65 to 300" />
+                    </WrapPanel>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Sensitivity:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxSensitivity" MaxWidth="200" Width="200" Padding="2,0" materialDesign:HintAssist.Hint="0 to 10" />
+                    </WrapPanel>
+                    <Label Margin="10" Background="Aqua" Width="700" Height="1"/>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Level:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxLevel" MaxWidth="200" Width="200" MaxLength="2" Padding="2,0" materialDesign:HintAssist.Hint="1 to 80" />
+                    </WrapPanel>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0">
+                        <TextBlock Margin="0,5" Width="150">Prestige:</TextBlock>
+                        <TextBox Margin="30,0" Background="#323232" x:Name="txtboxPrestige" MaxWidth="200" Width="200" MaxLength="2" Padding="2,0" materialDesign:HintAssist.Hint="0 to 20" />
+                    </WrapPanel>
+
+                    <Button Margin="20" x:Name="btnSaveSettings" Click="BtnSaveSettings_Click" Content="Save Settings"/>
+                </StackPanel>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>

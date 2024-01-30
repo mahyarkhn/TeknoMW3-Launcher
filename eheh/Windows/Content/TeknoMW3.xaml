@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="eheh.Windows.Content.TeknoMW3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:eheh.Windows.Content"
+             mc:Ignorable="d" 
+             d:DesignHeight="504" d:DesignWidth="756">
+    <Grid>
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect FadeIn, Duration=0:0:0.3}">
+            <Grid Margin="0, 0, 0, 0">
+                <Grid x:Name="MainContent">
+                    <Image x:Name="MainContentBackground" Source="/Resources/mainContentBackground.jpg" Stretch="UniformToFill"/>
+                    <Button x:Name="btnMultiplayer" Margin="50,0,0,300" HorizontalAlignment="Left" Width="120" Background="#323232" Click="BtnMultiplayer_Click">Multiplayer</Button>
+                    <Button x:Name="btnLan" Margin="50,0,0,200" HorizontalAlignment="Left" Width="120" Background="#323232" Click="BtnLan_Click">Lan</Button>
+                </Grid>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
